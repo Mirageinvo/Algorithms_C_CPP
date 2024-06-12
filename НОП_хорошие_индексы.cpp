@@ -18,20 +18,6 @@ using namespace std;
 
 const long int INF = 1e9;
 
-inline int bin_search_ind(const vector<int>& dp, int el) {
-    int l = 0, r = dp.size();
-    while (r - l > 1) {
-        int m = l + ((r - l) / 2);
-        if (dp[m] < el) {
-            l = m;
-        }
-        else {
-            r = m;
-        }
-    }
-    return l;
-}
-
 int main() {
     int n, m;
     cin >> n;
