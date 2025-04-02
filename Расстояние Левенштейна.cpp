@@ -21,7 +21,7 @@ int main() {
     }
     for (size_t i = 1; i < dp.size(); ++i) {
         for (size_t j = 1; j < dp[i].size(); ++j) {
-            dp[i][j] = min(dp[i - 1][j] + 1, min(dp[i][j - 1] + 1, dp[i - 1][j - 1] + (s1[i] == s2[j] ? 0 : 1)));
+            dp[i][j] = min(dp[i - 1][j] + 1, min(dp[i][j - 1] + 1, dp[i - 1][j - 1] + (s1[i - 1] == s2[j - 1] ? 0 : 1)));
         }
     }
     cout << dp[s1.size()][s2.size()];
